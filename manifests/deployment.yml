@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kristinavillanuevapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kristinavillanuevapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: kristinavillanuevapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: kristinavillanuevapipelinesjavascriptdocker 
+          image: krisvcontainerregistry.azurecr.io/kristinavillanuevapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
